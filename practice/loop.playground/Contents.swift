@@ -36,5 +36,5 @@ var x = 6
 repeat {
     x+=2
 
-} while x < 5
+    } while x < 5
 print(x) // 8출력 because 6인 상태에서 repeat이 한 번 더 실행되기 때문
