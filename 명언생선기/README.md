@@ -1,5 +1,4 @@
-# ¿¿¿¿
-
+# í•„ìš”ê¸°ìˆ 
 - Storyboard
 - AutoLayout
 - UILabel
