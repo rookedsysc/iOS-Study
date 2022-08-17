@@ -48,13 +48,14 @@ Navigation Controller로 구현할시 화면 상단에 항상 보여짐
 ## Navigation Controller
 ![navigation controller](./img/useNavgationController.png)
 ### pushViewController
+네비게이션 스택에 화면을 추가하는 메서드<br>
 첫 파라미터에는 view controller의 인스턴스, 두 번째는 애니메이션 사용 여부
 ### popViewController
+네비게이션 스택에 화면을 제거하는 메서드<br>
+view controller의 인스턴스 값을 인자로 받지 않으며, 첫 파라미터에 애니메이션 사용 여부만 인자로 받음
 
 ## Segueway
 스토리보드를 통해 직접 출발지와 목적지를 지정함<br>
-
-![segueway](./img/useSegueway.png)
 ### Action Segueway
 출발점이 Button인 경우
 ### Manual Segueway
