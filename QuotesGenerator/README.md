@@ -1,4 +1,4 @@
-# 필요기술
+# 활용기술
 - Storyboard
 - AutoLayout
 - UILabel
