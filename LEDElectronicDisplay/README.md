@@ -14,15 +14,15 @@
 - 화면 구성과 이벤트 관리는 Child View Controller 에서 함
 - Container View Controller 는 대표적으로 Navigation Controller 와 TabBar Controller가 있음
 
-![containerView][./img/containerView.png]
+![containerView](./img/containerView.png)
 
 ## Navigation Stack
 Last in First Out 구조를 가짐<br>
 
-![push][./img/]navigationBarPush.png]<br>
-![push][./img/]navigationBarPop.png]
+![push][./img/](navigationBarPush.png)<br>
+![push][./img/](navigationBarPop.png)
 
 ## Navigation Bar 구성
 Navigation Controller로 구현할시 화면 상단에 항상 보여짐
-![NavigationBar][./img/navigationBar.png]
+![NavigationBar](./img/navigationBar.png)
 
