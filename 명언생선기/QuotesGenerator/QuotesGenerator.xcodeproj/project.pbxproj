@@ -16,6 +16,7 @@
 		BDA9FAD028AD360A004A55AD /* QuotesGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA9FACF28AD360A004A55AD /* QuotesGeneratorTests.swift */; };
 		BDA9FADA28AD360A004A55AD /* QuotesGeneratorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA9FAD928AD360A004A55AD /* QuotesGeneratorUITests.swift */; };
 		BDA9FADC28AD360A004A55AD /* QuotesGeneratorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA9FADB28AD360A004A55AD /* QuotesGeneratorUITestsLaunchTests.swift */; };
+		BDA9FAE928AD3F1C004A55AD /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA9FAE828AD3F1C004A55AD /* Quote.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		BDA9FAD528AD360A004A55AD /* QuotesGeneratorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuotesGeneratorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDA9FAD928AD360A004A55AD /* QuotesGeneratorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesGeneratorUITests.swift; sourceTree = "<group>"; };
 		BDA9FADB28AD360A004A55AD /* QuotesGeneratorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesGeneratorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BDA9FAE828AD3F1C004A55AD /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				BDA9FAC128AD3609004A55AD /* Assets.xcassets */,
 				BDA9FAC328AD3609004A55AD /* LaunchScreen.storyboard */,
 				BDA9FAC628AD3609004A55AD /* Info.plist */,
+				BDA9FAE828AD3F1C004A55AD /* Quote.swift */,
 			);
 			path = QuotesGenerator;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDA9FAE928AD3F1C004A55AD /* Quote.swift in Sources */,
 				BDA9FABD28AD3608004A55AD /* ViewController.swift in Sources */,
 				BDA9FAB928AD3608004A55AD /* AppDelegate.swift in Sources */,
 				BDA9FABB28AD3608004A55AD /* SceneDelegate.swift in Sources */,
@@ -437,6 +441,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3SDH4HX6H8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = QuotesGenerator/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -464,6 +469,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3SDH4HX6H8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = QuotesGenerator/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
