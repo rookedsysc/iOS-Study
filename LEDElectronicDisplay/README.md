@@ -19,8 +19,8 @@
 ## Navigation Stack
 Last in First Out 구조를 가짐<br>
 
-![push][./img/](navigationBarPush.png)<br>
-![push][./img/](navigationBarPop.png)
+![push](./img/navigationBarPush.png)<br>
+![push](./img/navigationBarPop.png)
 
 ## Navigation Bar 구성
 Navigation Controller로 구현할시 화면 상단에 항상 보여짐
