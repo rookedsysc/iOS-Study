@@ -13,6 +13,10 @@
 		BDA9FAFE28AD5EF2004A55AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDA9FAFC28AD5EF2004A55AD /* Main.storyboard */; };
 		BDA9FB0028AD5EF4004A55AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDA9FAFF28AD5EF4004A55AD /* Assets.xcassets */; };
 		BDA9FB0328AD5EF4004A55AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDA9FB0128AD5EF4004A55AD /* LaunchScreen.storyboard */; };
+		BDA9FB0B28AD9AF6004A55AD /* SeguePushViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA9FB0A28AD9AF6004A55AD /* SeguePushViewController.swift */; };
+		BDA9FB0D28AD9CF4004A55AD /* SuguePresentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA9FB0C28AD9CF4004A55AD /* SuguePresentViewController.swift */; };
+		BDA9FB0F28AD9E12004A55AD /* CodePushViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA9FB0E28AD9E12004A55AD /* CodePushViewController.swift */; };
+		BDA9FB1328ADA09A004A55AD /* CodePresentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA9FB1228ADA09A004A55AD /* CodePresentViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		BDA9FAFF28AD5EF4004A55AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BDA9FB0228AD5EF4004A55AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BDA9FB0428AD5EF4004A55AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BDA9FB0A28AD9AF6004A55AD /* SeguePushViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeguePushViewController.swift; sourceTree = "<group>"; };
+		BDA9FB0C28AD9CF4004A55AD /* SuguePresentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuguePresentViewController.swift; sourceTree = "<group>"; };
+		BDA9FB0E28AD9E12004A55AD /* CodePushViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodePushViewController.swift; sourceTree = "<group>"; };
+		BDA9FB1228ADA09A004A55AD /* CodePresentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodePresentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +68,13 @@
 				BDA9FAF828AD5EF2004A55AD /* SceneDelegate.swift */,
 				BDA9FAFA28AD5EF2004A55AD /* ViewController.swift */,
 				BDA9FAFC28AD5EF2004A55AD /* Main.storyboard */,
+				BDA9FB0C28AD9CF4004A55AD /* SuguePresentViewController.swift */,
 				BDA9FAFF28AD5EF4004A55AD /* Assets.xcassets */,
 				BDA9FB0128AD5EF4004A55AD /* LaunchScreen.storyboard */,
 				BDA9FB0428AD5EF4004A55AD /* Info.plist */,
+				BDA9FB0A28AD9AF6004A55AD /* SeguePushViewController.swift */,
+				BDA9FB0E28AD9E12004A55AD /* CodePushViewController.swift */,
+				BDA9FB1228ADA09A004A55AD /* CodePresentViewController.swift */,
 			);
 			path = LEDElectronicDisplay;
 			sourceTree = "<group>";
@@ -138,7 +150,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDA9FB0D28AD9CF4004A55AD /* SuguePresentViewController.swift in Sources */,
+				BDA9FB0F28AD9E12004A55AD /* CodePushViewController.swift in Sources */,
+				BDA9FB0B28AD9AF6004A55AD /* SeguePushViewController.swift in Sources */,
 				BDA9FAFB28AD5EF2004A55AD /* ViewController.swift in Sources */,
+				BDA9FB1328ADA09A004A55AD /* CodePresentViewController.swift in Sources */,
 				BDA9FAF728AD5EF2004A55AD /* AppDelegate.swift in Sources */,
 				BDA9FAF928AD5EF2004A55AD /* SceneDelegate.swift in Sources */,
 			);
