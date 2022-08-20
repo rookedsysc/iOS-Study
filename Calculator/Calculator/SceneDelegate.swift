@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  ScreenTransitionExample2
+//  Calculator
 //
-//  Created by Rookedsysc on 2022. 8. 20..
+//  Created by Rookedsysc on 2022. 8. 21..
 //
 
 import UIKit

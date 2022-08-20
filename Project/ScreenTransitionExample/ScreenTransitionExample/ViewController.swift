@@ -40,6 +40,7 @@ class ViewController: UIViewController, SendDataDelegate {
     
     func sendData(name: String) {
         self.nameLabel.text = name
+        // Label
         self.nameLabel.sizeToFit()
     }
     
