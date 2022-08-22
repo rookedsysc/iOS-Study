@@ -38,7 +38,7 @@
                                                         <color key="backgroundColor" red="0.6470588235294118" green="0.6470588235294118" blue="0.6470588235294118" alpha="1" colorSpace="calibratedRGB"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="AC">
-                                                            <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
+                                                            <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="0.0"/>
                                                             <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
                                                         <userDefinedRuntimeAttributes>
@@ -56,7 +56,7 @@
                                                         </constraints>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="%">
-                                                            <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
+                                                            <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="0.0"/>
                                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
                                                         <userDefinedRuntimeAttributes>
@@ -79,7 +79,7 @@
                                                         </constraints>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="7">
-                                                            <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
+                                                            <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="0.0"/>
                                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
                                                         <userDefinedRuntimeAttributes>
@@ -97,7 +97,7 @@
                                                         </constraints>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="8">
-                                                            <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
+                                                            <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="0.0"/>
                                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
                                                         <userDefinedRuntimeAttributes>
@@ -115,7 +115,7 @@
                                                         </constraints>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="9">
-                                                            <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
+                                                            <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="0.0"/>
                                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
                                                         <userDefinedRuntimeAttributes>
@@ -203,7 +203,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eO1-ry-be1" customClass="RoundButton" customModule="Calculator" customModuleProvider="target">
-                                                        <rect key="frame" x="278.5" y="0.0" width="88" height="88"/>
+                                                        <rect key="frame" x="278.5" y="0.0" width="87.5" height="88"/>
                                                         <color key="backgroundColor" red="0.99607843137254903" green="0.62745098039215685" blue="0.039215686274509803" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="eO1-ry-be1" secondAttribute="height" id="f07-Fw-jLP" userLabel="aspect = 1"/>
@@ -395,54 +395,4 @@
             <point key="canvasLocation" x="20" y="80"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="1wm-WR-NM7">
-            <size key="intrinsicContentSize" width="43" height="50"/>
-        </designable>
-        <designable name="2jx-vR-9co">
-            <size key="intrinsicContentSize" width="43" height="50"/>
-        </designable>
-        <designable name="45f-zo-ybV">
-            <size key="intrinsicContentSize" width="42.5" height="50"/>
-        </designable>
-        <designable name="6m5-ft-10y">
-            <size key="intrinsicContentSize" width="31" height="50"/>
-        </designable>
-        <designable name="Gls-WR-Se6">
-            <size key="intrinsicContentSize" width="43.5" height="50"/>
-        </designable>
-        <designable name="IE5-A8-PyD">
-            <size key="intrinsicContentSize" width="42.5" height="50"/>
-        </designable>
-        <designable name="SXl-l9-rea">
-            <size key="intrinsicContentSize" width="38" height="50"/>
-        </designable>
-        <designable name="aVb-cb-VXW">
-            <size key="intrinsicContentSize" width="41.5" height="50"/>
-        </designable>
-        <designable name="dYd-gE-mif">
-            <size key="intrinsicContentSize" width="43" height="50"/>
-        </designable>
-        <designable name="m7g-7s-xVs">
-            <size key="intrinsicContentSize" width="43" height="50"/>
-        </designable>
-        <designable name="nPn-je-trM">
-            <size key="intrinsicContentSize" width="42" height="50"/>
-        </designable>
-        <designable name="q2h-B1-NT1">
-            <size key="intrinsicContentSize" width="64" height="50"/>
-        </designable>
-        <designable name="q7L-rr-n2I">
-            <size key="intrinsicContentSize" width="49" height="50"/>
-        </designable>
-        <designable name="sxx-ft-gbt">
-            <size key="intrinsicContentSize" width="41" height="50"/>
-        </designable>
-        <designable name="tTw-YP-g8R">
-            <size key="intrinsicContentSize" width="43" height="50"/>
-        </designable>
-        <designable name="uFm-PV-spx">
-            <size key="intrinsicContentSize" width="43" height="50"/>
-        </designable>
-    </designables>
 </document>

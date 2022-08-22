@@ -8,7 +8,7 @@
 import UIKit
 
 // 변경된 설정값을 스토리보드 상에서 실시간으로 확인할 수 있게 해줌
-@IBDesignable
+//@IBDesignable
 class RoundButton: UIButton {
     // 스토리보드에서도 isRound 설정값을 변경할 수 있게 해줌
     @IBInspectable var isRound: Bool = false {
