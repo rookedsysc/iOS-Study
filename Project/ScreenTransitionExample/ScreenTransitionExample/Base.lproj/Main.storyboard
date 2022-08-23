@@ -16,61 +16,52 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="21z-nJ-ozq">
-                                <rect key="frame" x="30" y="310.5" width="354" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Segue로 Push"/>
-                                <connections>
-                                    <segue destination="gRc-Gn-a0r" kind="show" id="fQq-QA-6dK"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YYy-rC-3FL">
-                                <rect key="frame" x="141.5" y="432.5" width="131" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Segue로 Present"/>
-                                <connections>
-                                    <segue destination="7af-ko-Ke3" kind="presentation" modalPresentationStyle="fullScreen" id="I8q-Cv-2Nq"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7YU-W8-l6O">
-                                <rect key="frame" x="30" y="371.5" width="354" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="코드로 Push"/>
-                                <connections>
-                                    <action selector="tapCodePushButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pyW-xN-0AM"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IDE-hq-eYG">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IDE-hq-eYG">
                                 <rect key="frame" x="30" y="493.5" width="354" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="코드로 Present"/>
                                 <connections>
                                     <action selector="tapCodePresentButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jax-5Z-x6n"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ixi-K2-fqb">
-                                <rect key="frame" x="178" y="615" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ixi-K2-fqb">
+                                <rect key="frame" x="30" y="615" width="354" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ef-2O-oLK">
+                                <rect key="frame" x="142" y="432.5" width="130.5" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Segue로 Present"/>
+                                <connections>
+                                    <segue destination="7af-ko-Ke3" kind="presentation" id="Pda-Ti-gE4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z4L-KI-eGc">
+                                <rect key="frame" x="30" y="279" width="354" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Segue로 Push"/>
+                                <connections>
+                                    <segue destination="gRc-Gn-a0r" kind="show" id="24x-L5-ih7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7YU-W8-l6O">
+                                <rect key="frame" x="30" y="365" width="354" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="코드로 Push"/>
+                                <connections>
+                                    <action selector="tapCodePushButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pyW-xN-0AM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7YU-W8-l6O" secondAttribute="trailing" constant="30" id="Ban-1N-EQc"/>
-                            <constraint firstItem="7YU-W8-l6O" firstAttribute="top" secondItem="21z-nJ-ozq" secondAttribute="bottom" constant="30" id="Ewq-Zr-6Jr"/>
-                            <constraint firstItem="21z-nJ-ozq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="JyG-ok-oj3"/>
-                            <constraint firstItem="IDE-hq-eYG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="N6u-md-fDf"/>
-                            <constraint firstItem="IDE-hq-eYG" firstAttribute="top" secondItem="YYy-rC-3FL" secondAttribute="bottom" constant="30" id="ZuE-4F-bRF"/>
-                            <constraint firstItem="7YU-W8-l6O" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="c0P-uj-G2P"/>
-                            <constraint firstItem="YYy-rC-3FL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qQi-5o-RUb"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IDE-hq-eYG" secondAttribute="trailing" constant="30" id="r3l-JD-vVp"/>
-                            <constraint firstItem="YYy-rC-3FL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="wjd-wQ-DiB"/>
-                            <constraint firstItem="YYy-rC-3FL" firstAttribute="top" secondItem="7YU-W8-l6O" secondAttribute="bottom" constant="30" id="xds-QB-zdF"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="21z-nJ-ozq" secondAttribute="trailing" constant="30" id="yDH-0T-grH"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="837-PL-stJ"/>
                     <connections>
@@ -79,7 +70,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138" y="80"/>
+            <point key="canvasLocation" x="137.68115942028987" y="79.6875"/>
         </scene>
         <!--Segue Push View Controller-->
         <scene sceneID="E0y-HS-n2c">
@@ -188,17 +179,17 @@
             <objects>
                 <viewController id="7af-ko-Ke3" customClass="SuguePresentViewController" customModule="LEDElectronicDisplay" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Gcc-3L-BTk">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Segue로 Present" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CzX-VW-jyK">
-                                <rect key="frame" x="20" y="437.5" width="374" height="21"/>
+                                <rect key="frame" x="20" y="410.5" width="374" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PQ8-Wz-6F5">
-                                <rect key="frame" x="20" y="478.5" width="374" height="31"/>
+                                <rect key="frame" x="20" y="451.5" width="374" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Back Button"/>
                                 <connections>

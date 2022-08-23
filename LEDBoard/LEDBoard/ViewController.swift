@@ -19,11 +19,9 @@ class ViewController: UIViewController, LEDBoardSettingDelegate {
     // 오버라이드 + 다운캐스팅으로 SettingVeiwController에 직접 접근
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let settingViewController = segue.destination as? SettingViewController {
-            /*
-             Delegate를 통해 SettingVeiwController를 위임해줌
-             세팅 후 다시 세팅창에 들어갔을 시 세팅창이 초기화되지 않고 이전 세팅값을 가지고 있게끔 해주는 구문
-             */
+            // Delegate를 통해 SettingVeiwController를 위임해줌
             settingViewController.delegate = self
+            // 세팅 후 다시 세팅창에 들어갔을 시 세팅창이 초기화되지 않고 이전 세팅값을 가지고 있게끔 해주는 구문
             settingViewController.ledText = self.contentsLabel.text
             settingViewController.textColor = self.contentsLabel.textColor
             settingViewController.backgroundColor = self.view.backgroundColor ?? .black

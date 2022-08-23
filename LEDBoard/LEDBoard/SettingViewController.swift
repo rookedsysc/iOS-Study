@@ -21,6 +21,7 @@ class SettingViewController: UIViewController {
     @IBOutlet weak var blueButton: UIButton!
     @IBOutlet weak var orangeButton: UIButton!
     
+    // LEDBoardSettingDelegate 프로토콜을 delegate로 프로퍼티에 선언해줌
     weak var delegate: LEDBoardSettingDelegate?
     var textColor: UIColor = .yellow
     var backgroundColor: UIColor = .black
