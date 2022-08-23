@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     @IBOutlet var editButton: UIBarButtonItem!
     var doneButton: UIBarButtonItem?
     
+    // Task Struct에 감시자 설정, 값이 바뀔 때마다 saveTakss() 호출
     var tasks = [Task]() {
         didSet {
             self.saveTasks()
@@ -62,11 +63,12 @@ class ViewController: UIViewController {
         self.doneButtonTap()
         self.present(alert, animated: true, completion: nil)
     }
-    
+    // 값을 저장해줌
     func saveTasks() {
-        // 배열의 요소들을 dictional 형태로 mapping함
+        // 배열의 요소들을 dictionary 형태로 mapping함
         let data = self.tasks.map {
             [
+                // $0은 첫 번째 인자를 뜻함
                 "title": $0.title,
                 "done": $0.done
             ]
