@@ -7,31 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BD106A8E28B495DE002F9C0F /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD106A8D28B495DE002F9C0F /* Task.swift */; };
-		BD106AD028B4D11F002F9C0F /* Rookedsysc.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD106ACF28B4D11F002F9C0F /* Rookedsysc.swift */; };
-		BD7494EF28B446710001EC55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7494EE28B446710001EC55 /* AppDelegate.swift */; };
-		BD7494F128B446710001EC55 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7494F028B446710001EC55 /* SceneDelegate.swift */; };
-		BD7494F328B446710001EC55 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7494F228B446710001EC55 /* ViewController.swift */; };
-		BD7494F628B446710001EC55 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD7494F428B446710001EC55 /* Main.storyboard */; };
-		BD7494F828B446730001EC55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD7494F728B446730001EC55 /* Assets.xcassets */; };
-		BD7494FB28B446730001EC55 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD7494F928B446730001EC55 /* LaunchScreen.storyboard */; };
+		BD106ADE28C42FA6002F9C0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD106ADD28C42FA6002F9C0F /* AppDelegate.swift */; };
+		BD106AE028C42FA6002F9C0F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD106ADF28C42FA6002F9C0F /* SceneDelegate.swift */; };
+		BD106AE228C42FA6002F9C0F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD106AE128C42FA6002F9C0F /* ViewController.swift */; };
+		BD106AE528C42FA6002F9C0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD106AE328C42FA6002F9C0F /* Main.storyboard */; };
+		BD106AE728C42FAA002F9C0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD106AE628C42FAA002F9C0F /* Assets.xcassets */; };
+		BD106AEA28C42FAA002F9C0F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD106AE828C42FAA002F9C0F /* LaunchScreen.storyboard */; };
+		BDF910B428C458C3003378B7 /* DiaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF910B328C458C3003378B7 /* DiaryCell.swift */; };
+		BDF910B628C458F5003378B7 /* StarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF910B528C458F5003378B7 /* StarViewController.swift */; };
+		BDF910B828C45B86003378B7 /* StarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF910B728C45B86003378B7 /* StarCell.swift */; };
+		BDF910BA28C45D7F003378B7 /* WriteDiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF910B928C45D7F003378B7 /* WriteDiaryViewController.swift */; };
+		BDF910BC28C45DE6003378B7 /* DiaryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF910BB28C45DE6003378B7 /* DiaryDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BD106A8D28B495DE002F9C0F /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
-		BD106ACF28B4D11F002F9C0F /* Rookedsysc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rookedsysc.swift; sourceTree = "<group>"; };
-		BD7494EB28B446710001EC55 /* ToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		BD7494EE28B446710001EC55 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BD7494F028B446710001EC55 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BD7494F228B446710001EC55 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		BD7494F528B446710001EC55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		BD7494F728B446730001EC55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		BD7494FA28B446730001EC55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		BD7494FC28B446730001EC55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD106ADA28C42FA6002F9C0F /* Diary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Diary.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD106ADD28C42FA6002F9C0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BD106ADF28C42FA6002F9C0F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		BD106AE128C42FA6002F9C0F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BD106AE428C42FA6002F9C0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BD106AE628C42FAA002F9C0F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BD106AE928C42FAA002F9C0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BD106AEB28C42FAA002F9C0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BDF910B328C458C3003378B7 /* DiaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryCell.swift; sourceTree = "<group>"; };
+		BDF910B528C458F5003378B7 /* StarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarViewController.swift; sourceTree = "<group>"; };
+		BDF910B728C45B86003378B7 /* StarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarCell.swift; sourceTree = "<group>"; };
+		BDF910B928C45D7F003378B7 /* WriteDiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteDiaryViewController.swift; sourceTree = "<group>"; };
+		BDF910BB28C45DE6003378B7 /* DiaryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		BD7494E828B446710001EC55 /* Frameworks */ = {
+		BD106AD728C42FA6002F9C0F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,74 +47,77 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		BD7494E228B446710001EC55 = {
+		BD106AD128C42FA6002F9C0F = {
 			isa = PBXGroup;
 			children = (
-				BD7494ED28B446710001EC55 /* ToDoList */,
-				BD7494EC28B446710001EC55 /* Products */,
+				BD106ADC28C42FA6002F9C0F /* Diary */,
+				BD106ADB28C42FA6002F9C0F /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		BD7494EC28B446710001EC55 /* Products */ = {
+		BD106ADB28C42FA6002F9C0F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BD7494EB28B446710001EC55 /* ToDoList.app */,
+				BD106ADA28C42FA6002F9C0F /* Diary.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BD7494ED28B446710001EC55 /* ToDoList */ = {
+		BD106ADC28C42FA6002F9C0F /* Diary */ = {
 			isa = PBXGroup;
 			children = (
-				BD7494EE28B446710001EC55 /* AppDelegate.swift */,
-				BD7494F028B446710001EC55 /* SceneDelegate.swift */,
-				BD7494F228B446710001EC55 /* ViewController.swift */,
-				BD7494F428B446710001EC55 /* Main.storyboard */,
-				BD7494F728B446730001EC55 /* Assets.xcassets */,
-				BD7494F928B446730001EC55 /* LaunchScreen.storyboard */,
-				BD7494FC28B446730001EC55 /* Info.plist */,
-				BD106A8D28B495DE002F9C0F /* Task.swift */,
-				BD106ACF28B4D11F002F9C0F /* Rookedsysc.swift */,
+				BD106ADD28C42FA6002F9C0F /* AppDelegate.swift */,
+				BD106ADF28C42FA6002F9C0F /* SceneDelegate.swift */,
+				BD106AE128C42FA6002F9C0F /* ViewController.swift */,
+				BD106AE328C42FA6002F9C0F /* Main.storyboard */,
+				BD106AE628C42FAA002F9C0F /* Assets.xcassets */,
+				BD106AE828C42FAA002F9C0F /* LaunchScreen.storyboard */,
+				BD106AEB28C42FAA002F9C0F /* Info.plist */,
+				BDF910B328C458C3003378B7 /* DiaryCell.swift */,
+				BDF910B528C458F5003378B7 /* StarViewController.swift */,
+				BDF910B728C45B86003378B7 /* StarCell.swift */,
+				BDF910B928C45D7F003378B7 /* WriteDiaryViewController.swift */,
+				BDF910BB28C45DE6003378B7 /* DiaryDetailViewController.swift */,
 			);
-			path = ToDoList;
+			path = Diary;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BD7494EA28B446710001EC55 /* ToDoList */ = {
+		BD106AD928C42FA6002F9C0F /* Diary */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BD7494FF28B446730001EC55 /* Build configuration list for PBXNativeTarget "ToDoList" */;
+			buildConfigurationList = BD106AEE28C42FAA002F9C0F /* Build configuration list for PBXNativeTarget "Diary" */;
 			buildPhases = (
-				BD7494E728B446710001EC55 /* Sources */,
-				BD7494E828B446710001EC55 /* Frameworks */,
-				BD7494E928B446710001EC55 /* Resources */,
+				BD106AD628C42FA6002F9C0F /* Sources */,
+				BD106AD728C42FA6002F9C0F /* Frameworks */,
+				BD106AD828C42FA6002F9C0F /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = ToDoList;
-			productName = ToDoList;
-			productReference = BD7494EB28B446710001EC55 /* ToDoList.app */;
+			name = Diary;
+			productName = Diary;
+			productReference = BD106ADA28C42FA6002F9C0F /* Diary.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		BD7494E328B446710001EC55 /* Project object */ = {
+		BD106AD228C42FA6002F9C0F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1340;
 				LastUpgradeCheck = 1340;
 				TargetAttributes = {
-					BD7494EA28B446710001EC55 = {
+					BD106AD928C42FA6002F9C0F = {
 						CreatedOnToolsVersion = 13.4.1;
 					};
 				};
 			};
-			buildConfigurationList = BD7494E628B446710001EC55 /* Build configuration list for PBXProject "ToDoList" */;
+			buildConfigurationList = BD106AD528C42FA6002F9C0F /* Build configuration list for PBXProject "Diary" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -116,57 +125,60 @@
 				en,
 				Base,
 			);
-			mainGroup = BD7494E228B446710001EC55;
-			productRefGroup = BD7494EC28B446710001EC55 /* Products */;
+			mainGroup = BD106AD128C42FA6002F9C0F;
+			productRefGroup = BD106ADB28C42FA6002F9C0F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BD7494EA28B446710001EC55 /* ToDoList */,
+				BD106AD928C42FA6002F9C0F /* Diary */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		BD7494E928B446710001EC55 /* Resources */ = {
+		BD106AD828C42FA6002F9C0F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD7494FB28B446730001EC55 /* LaunchScreen.storyboard in Resources */,
-				BD7494F828B446730001EC55 /* Assets.xcassets in Resources */,
-				BD7494F628B446710001EC55 /* Main.storyboard in Resources */,
+				BD106AEA28C42FAA002F9C0F /* LaunchScreen.storyboard in Resources */,
+				BD106AE728C42FAA002F9C0F /* Assets.xcassets in Resources */,
+				BD106AE528C42FA6002F9C0F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		BD7494E728B446710001EC55 /* Sources */ = {
+		BD106AD628C42FA6002F9C0F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD106A8E28B495DE002F9C0F /* Task.swift in Sources */,
-				BD7494F328B446710001EC55 /* ViewController.swift in Sources */,
-				BD106AD028B4D11F002F9C0F /* Rookedsysc.swift in Sources */,
-				BD7494EF28B446710001EC55 /* AppDelegate.swift in Sources */,
-				BD7494F128B446710001EC55 /* SceneDelegate.swift in Sources */,
+				BD106AE228C42FA6002F9C0F /* ViewController.swift in Sources */,
+				BDF910BA28C45D7F003378B7 /* WriteDiaryViewController.swift in Sources */,
+				BDF910B828C45B86003378B7 /* StarCell.swift in Sources */,
+				BD106ADE28C42FA6002F9C0F /* AppDelegate.swift in Sources */,
+				BD106AE028C42FA6002F9C0F /* SceneDelegate.swift in Sources */,
+				BDF910BC28C45DE6003378B7 /* DiaryDetailViewController.swift in Sources */,
+				BDF910B428C458C3003378B7 /* DiaryCell.swift in Sources */,
+				BDF910B628C458F5003378B7 /* StarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		BD7494F428B446710001EC55 /* Main.storyboard */ = {
+		BD106AE328C42FA6002F9C0F /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				BD7494F528B446710001EC55 /* Base */,
+				BD106AE428C42FA6002F9C0F /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		BD7494F928B446730001EC55 /* LaunchScreen.storyboard */ = {
+		BD106AE828C42FAA002F9C0F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				BD7494FA28B446730001EC55 /* Base */,
+				BD106AE928C42FAA002F9C0F /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -174,7 +186,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		BD7494FD28B446730001EC55 /* Debug */ = {
+		BD106AEC28C42FAA002F9C0F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -234,7 +246,7 @@
 			};
 			name = Debug;
 		};
-		BD7494FE28B446730001EC55 /* Release */ = {
+		BD106AED28C42FAA002F9C0F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -288,7 +300,7 @@
 			};
 			name = Release;
 		};
-		BD74950028B446730001EC55 /* Debug */ = {
+		BD106AEF28C42FAA002F9C0F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -297,7 +309,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3SDH4HX6H8;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ToDoList/Info.plist;
+				INFOPLIST_FILE = Diary/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -308,7 +320,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = rookedsysc.ToDoList;
+				PRODUCT_BUNDLE_IDENTIFIER = rookedsysc.Diary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -316,7 +328,7 @@
 			};
 			name = Debug;
 		};
-		BD74950128B446730001EC55 /* Release */ = {
+		BD106AF028C42FAA002F9C0F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -325,7 +337,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3SDH4HX6H8;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ToDoList/Info.plist;
+				INFOPLIST_FILE = Diary/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -336,7 +348,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = rookedsysc.ToDoList;
+				PRODUCT_BUNDLE_IDENTIFIER = rookedsysc.Diary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -347,25 +359,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BD7494E628B446710001EC55 /* Build configuration list for PBXProject "ToDoList" */ = {
+		BD106AD528C42FA6002F9C0F /* Build configuration list for PBXProject "Diary" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BD7494FD28B446730001EC55 /* Debug */,
-				BD7494FE28B446730001EC55 /* Release */,
+				BD106AEC28C42FAA002F9C0F /* Debug */,
+				BD106AED28C42FAA002F9C0F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BD7494FF28B446730001EC55 /* Build configuration list for PBXNativeTarget "ToDoList" */ = {
+		BD106AEE28C42FAA002F9C0F /* Build configuration list for PBXNativeTarget "Diary" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BD74950028B446730001EC55 /* Debug */,
-				BD74950128B446730001EC55 /* Release */,
+				BD106AEF28C42FAA002F9C0F /* Debug */,
+				BD106AF028C42FAA002F9C0F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = BD7494E328B446710001EC55 /* Project object */;
+	rootObject = BD106AD228C42FA6002F9C0F /* Project object */;
 }

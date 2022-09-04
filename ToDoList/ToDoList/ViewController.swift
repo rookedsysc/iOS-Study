@@ -99,7 +99,7 @@ extension ViewController: UITableViewDataSource {
         // 스토리보드에서 정의한 셀을 dequeueReusableCell를 통해 가져오게 됨
         // 지정된 재사용 식별자(withIdentifier)에 대한 재사용 가능한 table view 객체를 반환을 하고 이를 table view에 추가하는 역할을 함
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-    
+        
         let task = self.tasks[indexPath.row]
         cell.textLabel?.text = task.title
         if task.done {
@@ -124,7 +124,6 @@ extension ViewController: UITableViewDataSource {
      destinationIndexPath 파라미터를 통해 어디로 이동 했는지 알려줌
      */
     func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-
         var tasks = self.tasks
         let task = tasks[sourceIndexPath.row]
         // 원래 있던 위치의 할 일을 삭제함
