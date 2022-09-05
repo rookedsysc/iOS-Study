@@ -115,3 +115,15 @@ extension ViewController: WriteDiaryViewDelegate {
         self.collectionView.reloadData()
     }
 }
+
+// diary detail view controller가 push 되게 함
+extension ViewController: UICollectionViewDelegate {
+    // 특정 cell이 선택됐음을 알려주는 메서드
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let viewController = self.storyboard?.instantiateViewController(identifier: "DiaryDetailViewController") as? DiaryDetailViewController else { return }
+        let diary = self.diaryList[indexPath.row] // 선택된 인덱스가 뭔지 넘겨줌
+        viewController.diary = diary
+        viewController.indexPath = indexPath
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
+}
