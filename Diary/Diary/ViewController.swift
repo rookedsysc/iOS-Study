@@ -124,6 +124,15 @@ extension ViewController: UICollectionViewDelegate {
         let diary = self.diaryList[indexPath.row] // 선택된 인덱스가 뭔지 넘겨줌
         viewController.diary = diary
         viewController.indexPath = indexPath
+        viewController.delegate = self
         self.navigationController?.pushViewController(viewController, animated: true)
+    }
+}
+
+// 삭제 버튼
+extension ViewController: DiaryDetailVeiwDelegate {
+    func didSelectDelete(indexPath: IndexPath) {
+        self.diaryList.remove(at: indexPath.row)
+        self.collectionView.deleteItems(at: [indexPath])
     }
 }
