@@ -21,6 +21,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         self.configureCollectionView()
         self.loadDiaryList()
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(editDiaryNotification(_:)),
+                                               name: NSNotification.Name("editDiary"),
+                                               object: nil
+        )
     }
     
     // UserDefaults를 이용해서 앱을 재실행해도 등록한 일기가 사라지지 않게 함
@@ -52,6 +57,16 @@ class ViewController: UIViewController {
             
         }
         self.diaryList = self.diaryList.sorted(by: {$0.date.compare($1.date) == .orderedDescending}) // 내림차순 정렬(최신순)
+    }
+    
+    @objc func editDiaryNotification(_ notification: Notification) {
+        guard let diary = notification.object as? Diary else { return } // 전달받은 Diary 객체 가져옴
+        guard let row = notification.userInfo?["indexPath.row"] as? Int else { return }
+        self.diaryList[row] = diary
+        self.diaryList = self.diaryList.sorted(by: {
+            $0.date.compare($1.date) == .orderedDescending
+        }) // 날짜가 변경될 수 있으므로 한 번 더 정렬
+        self.collectionView.reloadData() // collectionView에 reload 해줌
     }
     
     private func configureCollectionView() {
@@ -134,5 +149,9 @@ extension ViewController: DiaryDetailVeiwDelegate {
     func didSelectDelete(indexPath: IndexPath) {
         self.diaryList.remove(at: indexPath.row)
         self.collectionView.deleteItems(at: [indexPath])
+    }
+    
+    func didSelectStar(indexPath: IndexPath, isStar: Bool) {
+        self.diaryList[indexPath.row].isStar = isStar
     }
 }
