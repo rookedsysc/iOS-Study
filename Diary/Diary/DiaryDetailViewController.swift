@@ -37,7 +37,7 @@ class DiaryDetailViewController: UIViewController {
         
         // 즐겨찾기 버튼 활성화
         self.starButton = UIBarButtonItem(image: nil, style: .plain, target: self, action: #selector(tabStarButton))
-        self.starButton?.image = diary.isStar ? UIImage(systemName: "star.fill") : UIImage(systemName: "Star") // isStar true면 꽉찬 별, false면 테두리만 있는 별
+        self.starButton?.image = diary.isStar ? UIImage(systemName: "star.fill") : UIImage(systemName: "star") // isStar true면 꽉찬 별, false면 테두리만 있는 별
         self.starButton?.tintColor = .orange // 오렌지색으로 설정
         self.navigationItem.rightBarButtonItem = self.starButton
     }

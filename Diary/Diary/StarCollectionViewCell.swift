@@ -8,5 +8,8 @@
 import UIKit
 
 class StarCollectionViewCell: UICollectionViewCell {
+    @IBOutlet var titleLabel: UILabel!
+    @IBOutlet var dateLabel: UILabel!
+    
     
 }
