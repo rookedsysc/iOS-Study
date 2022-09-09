@@ -26,6 +26,7 @@ class DiaryDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureView()
+        
     }
     
     // 일기장 list 화면에서 일기장을 선택했을 때 diary 프로퍼티에 diary 객체를 넘겨주게 되면 일기장 상세화면에 일기장 제목, 내용, 날짜를 넘겨주게 됨
@@ -44,8 +45,7 @@ class DiaryDetailViewController: UIViewController {
     
     // Star Button을 눌렀을 때 호출되는 Selector
     @objc func tabStarButton() {
-        guard let isStar = self.diary?.isStar else { return }
-        guard let indexPath = self.indexPath else { return }
+        guard let isStar = self.diary?.isStar else { return } 
 
         if isStar {
             self.starButton?.image = UIImage(systemName: "star")
@@ -56,7 +56,7 @@ class DiaryDetailViewController: UIViewController {
         NotificationCenter.default.post(name: NSNotification.Name("starDiary"), object: [
             "diary": self.diary, 
             "isStar": self.diary?.isStar,
-            "indexPath": indexPath
+            "uuidString": self.diary?.uuidString
         ], userInfo: nil
         )
         // didSelectStar 메서드를 delegate(위임)해서 indexPath 값에 해당하는 isStar값을 넘겨줌
@@ -74,8 +74,7 @@ class DiaryDetailViewController: UIViewController {
     @objc func editDiaryNotification(_ notification: Notification) {
         // 포스트에서 보낸 수정된 Diary 객체를 가져오는 객체
         guard let diary = notification.object as? Diary else { return }
-        // userInfo의 indexPath의 row값을 가져오는 객체
-        guard let row = notification.userInfo?["indexPath.row"] as? Int else { return }
+ 
         self.diary = diary // 전달받은 수정된 다이어리 객체를 전달해줌
         self.configureView() // 수정된 내용으로 view가 update되게 configureView 호출
     }
@@ -99,11 +98,11 @@ class DiaryDetailViewController: UIViewController {
     }
     
     @IBAction func tabDeleteButton(_ sender: UIButton) {
-        guard let indexPath = self.indexPath else { return }
+        guard let uuidString = self.diary?.uuidString else { return }
         // self.delegate?.didSelectDelete(indexPath: indexPath)
         NotificationCenter.default.post(
             name: NSNotification.Name("deleteDiary"),
-            object: indexPath,
+            object: uuidString,
             userInfo: nil
         )
         self.navigationController?.popViewController(animated: true)

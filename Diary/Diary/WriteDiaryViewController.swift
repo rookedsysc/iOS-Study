@@ -89,17 +89,25 @@ class WriteDiaryViewController: UIViewController {
         
         switch self.diaryEditorMode {
         case .new : // case가 new라면 일기를 등록함
-            let diary = Diary(title: title, contents: contents, date: date, isStar: false)
+            let diary = Diary(
+                uuidString: UUID().uuidString, // 일기를 생성할 때마다 고유한 uuid값을 지정해줌
+                title: title,
+                contents: contents,
+                date: date,
+                isStar: false)
             self.delegate?.didSelectRegister(diary: diary)
         case let .edit(indexPath, diary) :
-            let diary = Diary(title: title, contents: contents, date: date, isStar: diary.isStar)
+            let diary = Diary(
+                uuidString: diary.uuidString,
+                title: title,
+                contents: contents,
+                date: date,
+                isStar: diary.isStar)
             // 수정 버튼을 눌렀을 때 notificationCenter가 editDiary라는 notification key를 observing(관찰)하는 곳에 수정된 다이어리 객체를 전달하게 됨
             NotificationCenter.default.post(
                 name: NSNotification.Name("editDiary"),
                 object: diary,
-                userInfo: [
-                    "indexPath.row": indexPath.row
-                ]
+                userInfo: nil
             )
         default:
             break
