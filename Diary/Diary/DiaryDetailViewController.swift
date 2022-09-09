@@ -8,8 +8,8 @@
 import UIKit
 
 protocol DiaryDetailVeiwDelegate: AnyObject {
-    func didSelectDelete(indexPath: IndexPath)
-    func didSelectStar(indexPath: IndexPath, isStar: Bool)
+    // func didSelectDelete(indexPath: IndexPath)
+    // func didSelectStar(indexPath: IndexPath, isStar: Bool)
 }
 
 class DiaryDetailViewController: UIViewController {
@@ -45,7 +45,7 @@ class DiaryDetailViewController: UIViewController {
     // Star Button을 눌렀을 때 호출되는 Selector
     @objc func tabStarButton() {
         guard let isStar = self.diary?.isStar else { return }
-        guard let indexPath = indexPath else { return }
+        guard let indexPath = self.indexPath else { return }
 
         if isStar {
             self.starButton?.image = UIImage(systemName: "star")
@@ -53,7 +53,14 @@ class DiaryDetailViewController: UIViewController {
             self.starButton?.image = UIImage(systemName: "star.fill")
         }
         self.diary?.isStar = !isStar
-        self.delegate?.didSelectStar(indexPath: indexPath, isStar: self.diary?.isStar ?? false)
+        NotificationCenter.default.post(name: NSNotification.Name("starDiary"), object: [
+            "diary": self.diary, 
+            "isStar": self.diary?.isStar,
+            "indexPath": indexPath
+        ], userInfo: nil
+        )
+        // didSelectStar 메서드를 delegate(위임)해서 indexPath 값에 해당하는 isStar값을 넘겨줌
+        // self.delegate?.didSelectStar(indexPath: indexPath, isStar: self.diary?.isStar ?? false)
     }
     
     /* 데이터 포매터 지정
@@ -93,7 +100,12 @@ class DiaryDetailViewController: UIViewController {
     
     @IBAction func tabDeleteButton(_ sender: UIButton) {
         guard let indexPath = self.indexPath else { return }
-        self.delegate?.didSelectDelete(indexPath: indexPath)
+        // self.delegate?.didSelectDelete(indexPath: indexPath)
+        NotificationCenter.default.post(
+            name: NSNotification.Name("deleteDiary"),
+            object: indexPath,
+            userInfo: nil
+        )
         self.navigationController?.popViewController(animated: true)
     }
     

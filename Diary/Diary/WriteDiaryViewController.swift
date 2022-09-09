@@ -86,12 +86,13 @@ class WriteDiaryViewController: UIViewController {
         guard let title = self.titleTextField.text else { return }
         guard let contents = self.contentsTextView.text else { return }
         guard let date = self.diaryDate else { return }
-        let diary = Diary(title: title, contents: contents, date: date, isStar: false)
         
         switch self.diaryEditorMode {
         case .new : // case가 new라면 일기를 등록함
+            let diary = Diary(title: title, contents: contents, date: date, isStar: false)
             self.delegate?.didSelectRegister(diary: diary)
-        case let .edit(indexPath, _) :
+        case let .edit(indexPath, diary) :
+            let diary = Diary(title: title, contents: contents, date: date, isStar: diary.isStar)
             // 수정 버튼을 눌렀을 때 notificationCenter가 editDiary라는 notification key를 observing(관찰)하는 곳에 수정된 다이어리 객체를 전달하게 됨
             NotificationCenter.default.post(
                 name: NSNotification.Name("editDiary"),

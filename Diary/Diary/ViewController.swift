@@ -21,10 +21,23 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         self.configureCollectionView()
         self.loadDiaryList()
+        
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(editDiaryNotification(_:)),
                                                name: NSNotification.Name("editDiary"),
                                                object: nil
+        )
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(starDiaryNotification(_:)),
+            name: NSNotification.Name("starDiary"),
+            object: nil
+        )
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(deleteDiaryNotification(_:)),
+            name: NSNotification.Name("deleteDiary"),
+            object: nil
         )
     }
     
@@ -42,7 +55,7 @@ class ViewController: UIViewController {
         /*
          data 형식이 Dictionary 형식, forkey에 있는 key를 dictionary 형태로 set(저장)해줌
          */
-        userDefaults.set(data, forKey: "DiaryList")
+        userDefaults.set(data, forKey: "diaryList")
     }
     
     private func loadDiaryList() {
@@ -68,6 +81,18 @@ class ViewController: UIViewController {
         }) // 날짜가 변경될 수 있으므로 한 번 더 정렬
         self.collectionView.reloadData() // collectionView에 reload 해줌
     }
+    @objc func starDiaryNotification(_ notification: Notification) {
+        guard let starDiary = notification.object as? [String: Any] else { return }
+        guard let isStar = starDiary["isStar"] as? Bool else { return }
+        guard let indexPath = starDiary["indexPath"] as? IndexPath else { return }
+        self.diaryList[indexPath.row].isStar = isStar
+    }
+    @objc func deleteDiaryNotification(_ notification: Notification) {
+        guard let indexPath = notification.object as? IndexPath else { return }
+        self.diaryList.remove(at: indexPath.row)
+        self.collectionView.deleteItems(at: [indexPath])
+    }
+    
     
     private func configureCollectionView() {
         self.collectionView.collectionViewLayout = UICollectionViewFlowLayout()
@@ -139,19 +164,22 @@ extension ViewController: UICollectionViewDelegate {
         let diary = self.diaryList[indexPath.row] // 선택된 인덱스가 뭔지 넘겨줌
         viewController.diary = diary
         viewController.indexPath = indexPath
-        viewController.delegate = self
+        // viewController.delegate = self
         self.navigationController?.pushViewController(viewController, animated: true)
     }
 }
 
+/*
 // 삭제 버튼
 extension ViewController: DiaryDetailVeiwDelegate {
     func didSelectDelete(indexPath: IndexPath) {
         self.diaryList.remove(at: indexPath.row)
         self.collectionView.deleteItems(at: [indexPath])
     }
-    
+
+    // 즐겨찾기 여부 업데이트
     func didSelectStar(indexPath: IndexPath, isStar: Bool) {
         self.diaryList[indexPath.row].isStar = isStar
     }
 }
+ */
