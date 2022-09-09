@@ -1,32 +1,32 @@
 # [About](#About)<br>
 # [8월](#August)<br>
-[명언생성기](##8/15~18)
-[LED 전광판](##8/18~20)
-[Calculator](##8/21~23)
+[명언생성기](##August-15~18)
+[LED 전광판](##August-18~20)
+[Calculator](##August-21~23)
 
 # [9월](#September)<br>
-[ToDoList](##9/4)
-[Calculator](##9/5~10)
+[ToDoList](##September-4)
+[Calculator](##September-5~10)
 
 # About
 swift and iOS Programming study with fastcampus
 
 # August
-## 8/11
+## August-11
 Create Repo + grammar
-## 8/11
+## August-11
 iOS Property
-## 8/14
+## August-14
 iOS class inheritance
-## 8/15~18
+## August-15~18
 명언생성기
-## 8/18~20
+## August-18~20
 LED 전광판
-## 8/21~23
+## August-21~23
 Calculator
 
-# September 
-## 9/4
+# September
+## September-4
 ToDoList
-## 9/5~10
+## September-5~10
 Dairy
