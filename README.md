@@ -20,6 +20,7 @@ iOS Property
 iOS class inheritance
 ## August-15
 명언생성기<br>
+[명언생성기 설명](https://rookedsysc.github.io/ios%20project/iOS_Project_Diary/)
 8/18 - done
 ## August-18
 LED 전광판<br>
