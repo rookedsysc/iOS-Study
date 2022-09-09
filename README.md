@@ -6,6 +6,17 @@
 swift and iOS Programming study with fastcampus
 
 # August
+## August-11
+Create Repo + grammar
+## August-11
+iOS Property
+## August-14
+iOS class inheritance
+## August-15~18
+명언생선기
+## August-18~20
+LED 전광판
+
 
 # September
 
