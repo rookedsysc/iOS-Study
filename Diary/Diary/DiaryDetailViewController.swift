@@ -27,6 +27,12 @@ class DiaryDetailViewController: UIViewController {
         super.viewDidLoad()
         self.configureView()
         
+        // Detail View간 즐겨찾기 싱크 맞추기
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(starDiaryNotification(_:)),
+            name: NSNotification.Name("starDiary"),
+            object: nil)
     }
     
     // 일기장 list 화면에서 일기장을 선택했을 때 diary 프로퍼티에 diary 객체를 넘겨주게 되면 일기장 상세화면에 일기장 제목, 내용, 날짜를 넘겨주게 됨
@@ -77,6 +83,21 @@ class DiaryDetailViewController: UIViewController {
  
         self.diary = diary // 전달받은 수정된 다이어리 객체를 전달해줌
         self.configureView() // 수정된 내용으로 view가 update되게 configureView 호출
+    }
+    
+    /* 일기장 탭과 즐겨찾기 탭에서 같은 일기를 클릭해서 detail view로 들어갔을 때,
+     일기장 탭의 detail view에서 즐겨찾기를 해제해도 즐겨찾기 tab의 detail view에서는 즐겨찾기 등록 상태임
+     이 현상의 싱크를 맞추기 위해서 사용된 구문 */
+    @objc func starDiaryNotification(_ notification: Notification) {
+        guard let starDiary = notification.object as? [String: Any] else { return }
+        guard let isStar = starDiary["isStar"] as? Bool else { return }
+        guard let uuidString = starDiary["uuidString"] as? String else { return }
+        guard let diary = self.diary else { return }
+        
+        if diary.uuidString == uuidString {
+            self.diary?.isStar = isStar
+            self.configureView()
+        }
     }
     
     @IBAction func tabEditButton(_ sender: UIButton) {
