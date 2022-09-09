@@ -1,9 +1,11 @@
-[About](# About)
-[8월](# August)
-[9월](# September)
+[About](#About)
+[8월](#August)
+[9월](#September)
 
-# About
+#About
 swift and iOS Programming study with fastcampus
 
-# August
+#August
+
+#September
 
