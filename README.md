@@ -1,14 +1,15 @@
-# [8월](#August)<br>
+# About
+swift and iOS Programming study with fastcampus
+
+## 목차 
+- [8월](#August)<br>
 [명언생성기](#August-15)
 [LED 전광판](#August-18)
 [Calculator](#August-21)
 
-# [9월](#September)<br>
+- [9월](#September)<br>
 [ToDoList](#September-4)
 [Diary](#September-5~10)
-
-# About
-swift and iOS Programming study with fastcampus
 
 # August
 ## August-11
