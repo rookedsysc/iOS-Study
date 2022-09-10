@@ -1,4 +1,3 @@
-# [About](#About)<br>
 # [8월](#August)<br>
 [명언생성기](#August-15)
 [LED 전광판](#August-18)
@@ -20,10 +19,11 @@ iOS Property
 iOS class inheritance
 ## August-15
 명언생성기<br>
-[명언생성기 설명](https://rookedsysc.github.io/ios%20project/iOS_Project_Diary/)
+[명언생성기 포스팅](https://rookedsysc.github.io/ios%20project/QuotesGenerator/)
 8/18 - done
 ## August-18
 LED 전광판<br>
+[LED 전광판 포스팅](https://rookedsysc.github.io/ios%20project/LEDBoard/)
 8/20-done
 ## August-21
 Calculator<br>

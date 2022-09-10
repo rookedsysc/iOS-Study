@@ -34,7 +34,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func tapBumberNutton(_ sender: UIButton) {
-        // sneder에 입력된 button의 타이틀 값을 받아옴 이 때, title값은 optional 값임
+        // sender에 입력된 button의 타이틀 값을 받아옴 이 때, title값은 optional 값임
         // 기존에 sender.title(for: .normal) 방식으로 타이틀 값을 받아오니 nil 이 반환되어서 대체해 줌
         guard let numberValue = sender.titleLabel?.text else { return }
         // displayNumber를 9개 미만으로만 받아줌 (9자리까지 입력 가능 < 9개일 때 못 들어와서 10개까지 입력이 안됨)
@@ -111,8 +111,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func tapDotButton(_ sender: UIButton) {
-        // displayNumber 문자열에 "."이 중복으로 표현 되는지 확인
         
+        // displayNumber 문자열에 "."이 중복으로 표현 되는지 확인
         if self.displayNumber.count < 8, !self.displayNumber.contains(".") {
             // displayNumber가 비어있다면 즉, 숫자가 아무것도 입력되지 않은 상태라면 0. 으로 입력되게 해줌
             self.displayNumber += self.displayNumber.isEmpty ? "0." : "."

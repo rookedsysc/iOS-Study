@@ -22,7 +22,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rFU-2T-OlM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1316" y="110"/>
+            <point key="canvasLocation" x="-623" y="110"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -38,19 +38,6 @@
                                 <color key="textColor" systemColor="systemYellowColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7bH-7F-Ezr">
-                                <rect key="frame" x="0.0" y="88" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Title" id="kqa-Qt-mkm">
-                                        <barButtonItem key="rightBarButtonItem" title="설정" id="XeW-Ja-6fM">
-                                            <connections>
-                                                <segue destination="xbI-ld-W5l" kind="show" id="nYm-Ut-cxm"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -59,7 +46,13 @@
                             <constraint firstItem="XOC-gC-VAV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="T1J-HF-g0p"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="LIX-IF-Tn4"/>
+                    <navigationItem key="navigationItem" id="LIX-IF-Tn4">
+                        <barButtonItem key="rightBarButtonItem" title="설정" id="7xo-Y9-Mzp">
+                            <connections>
+                                <segue destination="xbI-ld-W5l" kind="show" id="bD1-z4-kJh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="contentsLabel" destination="XOC-gC-VAV" id="aJv-Rc-56m"/>
                     </connections>

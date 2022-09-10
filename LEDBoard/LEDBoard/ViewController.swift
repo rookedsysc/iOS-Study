@@ -23,6 +23,8 @@ class ViewController: UIViewController, LEDBoardSettingDelegate {
             settingViewController.delegate = self
             // 세팅 후 다시 세팅창에 들어갔을 시 세팅창이 초기화되지 않고 이전 세팅값을 가지고 있게끔 해주는 구문
             settingViewController.ledText = self.contentsLabel.text
+            print(self.contentsLabel.text)
+            print(settingViewController.ledText)
             settingViewController.textColor = self.contentsLabel.textColor
             settingViewController.backgroundColor = self.view.backgroundColor ?? .black
         }

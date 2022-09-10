@@ -13,25 +13,29 @@ protocol LEDBoardSettingDelegate: AnyObject {
 }
 
 class SettingViewController: UIViewController {
+    
     @IBOutlet weak var textField: UITextField!
+    
     @IBOutlet weak var yellowButton: UIButton!
     @IBOutlet weak var purpleButton: UIButton!
     @IBOutlet weak var greenButton: UIButton!
+    
     @IBOutlet weak var blackButton: UIButton!
     @IBOutlet weak var blueButton: UIButton!
     @IBOutlet weak var orangeButton: UIButton!
     
     // LEDBoardSettingDelegate 프로토콜을 delegate로 프로퍼티에 선언해줌
     weak var delegate: LEDBoardSettingDelegate?
-    var textColor: UIColor = .yellow
-    var backgroundColor: UIColor = .black
+    
+    var textColor: UIColor = .black
+    var backgroundColor: UIColor = .yellow
     var ledText: String?
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        // 
-        self.configureView()
+      super.viewDidLoad()
+      self.configureView()
     }
+    
     
     private func configureView() {
         if let ledText = self.ledText {
@@ -82,7 +86,10 @@ class SettingViewController: UIViewController {
     
     @IBAction func tapSaveButton(_ sender: Any) {
         // 프로토콜 채택부의 changedSetting 함수로 값을 넘겨줘서 값을 바꿈(위임)
-        self.delegate?.changedSetting(text: self.textField.text, textColor: self.textColor, backgroundColor: self.backgroundColor)
+        self.delegate?.changedSetting(
+            text: self.textField.text,
+            textColor: self.textColor,
+            backgroundColor: self.backgroundColor)
         self.navigationController?.popViewController(animated: true)
     }
 }
