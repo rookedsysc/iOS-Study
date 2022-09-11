@@ -10,12 +10,13 @@ import UIKit
 class StarViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
-    private var diaryList  = [Diary]()
+    private var diaryList = [Diary]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureCollectionView()
         self.loadStarDiaryList()
+        
         NotificationCenter.default.addObserver(
             self,
             selector: #selector(editDiaryNotification(_:)),
@@ -68,6 +69,7 @@ class StarViewController: UIViewController {
             $0.date.compare($1.date) == .orderedDescending // 날짜 시간순으로 정렬
         })
     }
+
     
     @objc func editDiaryNotification(_ notification: Notification) {
         guard let diary = notification.object as? Diary else { return }

@@ -32,7 +32,8 @@ class DiaryDetailViewController: UIViewController {
             self,
             selector: #selector(starDiaryNotification(_:)),
             name: NSNotification.Name("starDiary"),
-            object: nil)
+            object: nil
+        )
     }
     
     // 일기장 list 화면에서 일기장을 선택했을 때 diary 프로퍼티에 diary 객체를 넘겨주게 되면 일기장 상세화면에 일기장 제목, 내용, 날짜를 넘겨주게 됨
@@ -65,8 +66,6 @@ class DiaryDetailViewController: UIViewController {
             "uuidString": self.diary?.uuidString
         ], userInfo: nil
         )
-        // didSelectStar 메서드를 delegate(위임)해서 indexPath 값에 해당하는 isStar값을 넘겨줌
-        // self.delegate?.didSelectStar(indexPath: indexPath, isStar: self.diary?.isStar ?? false)
     }
     
     /* 데이터 포매터 지정
@@ -95,6 +94,7 @@ class DiaryDetailViewController: UIViewController {
         guard let diary = self.diary else { return }
         
         if diary.uuidString == uuidString {
+            
             self.diary?.isStar = isStar
             self.configureView()
         }

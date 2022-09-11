@@ -12,12 +12,6 @@ swift and iOS Programming study with fastcampus
 [Diary](#September-5~10)
 
 # August
-## August-11
-Create Repo + grammar
-## August-11
-iOS Property
-## August-14
-iOS class inheritance
 ## August-15
 명언생성기<br>
 [명언생성기 포스팅](https://rookedsysc.github.io/ios%20project/QuotesGenerator/)
@@ -34,6 +28,7 @@ Calculator<br>
 # September
 ## September-4
 ToDoList
+[To Do List 포스팅](https://rookedsysc.github.io/ios%20project/ToDoList/)
 ## September-5
 Dairy<br>
 9/10-done
