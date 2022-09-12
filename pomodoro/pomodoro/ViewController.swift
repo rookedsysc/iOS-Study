@@ -24,6 +24,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var toggleButton: UIButton!
     
+    @IBOutlet weak var imageView: UIImageView!
+    
     // 타이머에 설정된 시간을 '초'단위로 저장함
     var duration = 60 // 앱이 실행되면 datePicker가 기본적으로 1로 시작을 해서 60으로 설정함
     // 타이머의 상태를 가지고 있는 프로퍼티
@@ -64,10 +66,16 @@ class ViewController: UIViewController {
         // 기본값인 end 상태로 초기 진입
         case .end:
             self.timerStatus = .start
-            // timerLabel과 progress View를 보이게 해줌
-            self.setTimerInfoViewVisble(isHidden: false)
-            self.datePicker.isHidden = true
             
+            // Button 선택시 Label, ProgressView 나타나는 애니메이션
+            UIView.animate(
+                withDuration: 0.5, // 몇 초 동안 애니메이션이 표시될건지
+                animations: {
+                    self.timerLabel.alpha = 1
+                    self.progressView.alpha = 1
+                    self.datePicker.alpha = 0
+                }
+            )
             // 선택된 상태가 되어서 Title이 "일시정지"가 됨
             self.toggleButton.isSelected = true
             self.cancelButton.isEnabled = true // 취소 버튼 활성화
@@ -118,7 +126,18 @@ class ViewController: UIViewController {
                 
                 // Progress는 1~0까지, 0에 가까워질수록 게이지가 비워짐
                 self.progressView.progress = Float(self.currnetSeconds) / Float(self.duration)
-                debugPrint(self.progressView.progress)
+         
+                // Image 빙글빙글 돌아가는
+                UIView.animate(
+                    withDuration: 0.5,
+                    delay: 0, // 몇 초 뒤에 동작할건지 설정
+                    animations: {
+                        // transform 프로퍼티(view의 외형을 변경해주는 프로퍼티)에 view의 프레임을 계산하지 않고 2D 그래픽을 구현시킬 수 있음
+                        self.imageView.transform = CGAffineTransform(rotationAngle: .pi) // 180도 회전
+                    })
+                UIView.animate(withDuration: 0.5, delay: 0.5, animations: {
+                    self.imageView.transform = CGAffineTransform(rotationAngle: .pi * 2) // 360도 회전
+                })
                                 
                 // 현재 시간이 0보다 작거나 같을 때
                 if self.currnetSeconds <= 0 {
@@ -142,9 +161,19 @@ class ViewController: UIViewController {
         /* 원래 tapCancelButton에 있던 Method들이지만 stopTimer() 호출될 때
         화면 초기화 해주기 위해서 stopTimer() 함수 안으로 가져옴 */
         self.timerStatus = .end // status상태 end로
-        self.datePicker.isHidden = false // date Picker 다시 표시
+        
+        // Label, ProgressView가 사라지고 DatePicker가 나타나는 animation
+        UIView.animate(
+            withDuration: 0.5,
+            animations: {
+                self.timerLabel.alpha = 0
+                self.progressView.alpha = 0
+                self.datePicker.alpha = 1
+                self.imageView.transform = .identity // 이미지 원상태로 돌아오게 해줌
+            }
+        )
+        
         self.cancelButton.isEnabled = false // 취소 비활성화
-        self.setTimerInfoViewVisble(isHidden: true) // label, progress 비활성화
         self.toggleButton.isSelected = false // toggleButton Title을 "시작"으로 변경
         
         self.timer?.cancel() // 타이머 멈춤
