@@ -66,7 +66,7 @@ class WriteDiaryViewController: UIViewController {
     
     private func configureDatePicker() {
         self.datePicker.datePickerMode = .date // 날짜만 선택
-        self.datePicker.preferredDatePickerStyle = .automatic
+        self.datePicker.preferredDatePickerStyle = .wheels
         
         // (target, selector, 어떤 이벤트가 발생했을 때 selector가 호출됨)
         self.datePicker.addTarget(self, action: #selector(datePickerValueDidChange(_:)), for: .valueChanged)
@@ -84,44 +84,44 @@ class WriteDiaryViewController: UIViewController {
         self.contentsTextView.layer.cornerRadius = 5.0
     }
     
-    //
-    @IBAction func tabConfirmButton(_ sender: Any) {
-        guard let title = self.titleTextField.text else { return }
-        guard let contents = self.contentsTextView.text else { return }
-        guard let date = self.diaryDate else { return }
-        
-        switch self.diaryEditorMode {
-        case .new : // case가 new라면 일기를 등록함
-            let diary = Diary(
-                uuidString: UUID().uuidString, // 일기를 생성할 때마다 고유한 uuid값을 지정해줌
-                title: title,
-                contents: contents,
-                date: date,
-                isStar: false)
-            self.delegate?.didSelectRegister(diary: diary)
-        case let .edit(indexPath, diary) :
-            let diary = Diary(
-                uuidString: diary.uuidString,
-                title: title,
-                contents: contents,
-                date: date,
-                isStar: diary.isStar)
-            // 수정 버튼을 눌렀을 때 notificationCenter가 editDiary라는 notification key를 observing(관찰)하는 곳에 수정된 다이어리 객체를 전달하게 됨
-            NotificationCenter.default.post(
-                name: NSNotification.Name("editDiary"),
-                object: diary,
-                userInfo: nil
-            )
-        default:
-            break
-        }
-        self.navigationController?.popViewController(animated: true)
+    
+@IBAction func tabConfirmButton(_ sender: Any) {
+    guard let title = self.titleTextField.text else { return }
+    guard let contents = self.contentsTextView.text else { return }
+    guard let date = self.diaryDate else { return }
+    
+    switch self.diaryEditorMode {
+    case .new : // case가 new라면 일기를 등록함
+        let diary = Diary(
+            uuidString: UUID().uuidString, // 일기를 생성할 때마다 고유한 uuid값을 지정해줌
+            title: title,
+            contents: contents,
+            date: date,
+            isStar: false)
+        self.delegate?.didSelectRegister(diary: diary)
+    case let .edit(indexPath, diary) :
+        let diary = Diary(
+            uuidString: diary.uuidString,
+            title: title,
+            contents: contents,
+            date: date,
+            isStar: diary.isStar)
+        // 수정 버튼을 눌렀을 때 notificationCenter가 editDiary라는 notification key를 observing(관찰)하는 곳에 수정된 다이어리 객체를 전달하게 됨
+        NotificationCenter.default.post(
+            name: NSNotification.Name("editDiary"),
+            object: diary,
+            userInfo: nil
+        )
+    default:
+        break
     }
+    self.navigationController?.popViewController(animated: true)
+}
     
     // 화면을 눌러줄 때 edit 상태에서 빠져나옴
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
-    }
+override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    self.view.endEditing(true)
+}
     
     @objc private func datePickerValueDidChange(_ datePicker: UIDatePicker) {
         let formmater = DateFormatter()

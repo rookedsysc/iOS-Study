@@ -140,8 +140,6 @@ extension ViewController: UICollectionViewDataSource {
         cell.dateLabel.text = self.dateToString(date: diary.date)
         return cell
     }
-    
-    
 }
 
 // WriteDidaryVC에서 데이터 전달
