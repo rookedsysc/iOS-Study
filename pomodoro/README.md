@@ -14,4 +14,4 @@
 4.2. 애니메이션 효과 넣어줌
 
 # Result
-[result](/img/pomodoro.gif)
+![result](/img/pomodoro.gif)
