@@ -1,5 +1,5 @@
 # About
-swift and iOS Programming study with fastcampus
+Swift and iOS Programming study with fastcampus
 
 ## 목차 
 - [8월](#August)<br>
