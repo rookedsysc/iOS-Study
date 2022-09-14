@@ -1,7 +1,7 @@
 # About
 Swift and iOS Programming study with fastcampus
 
-## 목차 
+# 목차 
 - [8월](#August)<br>
 [명언생성기](#August-15)
 [LED 전광판](#August-18)
