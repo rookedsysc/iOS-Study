@@ -44,8 +44,6 @@ class ViewController: UIViewController {
         self.maxTempLabel.text = "최고: \(Int(weatherInformation.temp.maxTemp - 273.15)) °C"
     }
     
-    
-    
     func getCurrentWeather(cityName: String) {
         // URL 호출
         guard let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?q=\(cityName)&appid=ef5f3573e78f892cd3eb3059b366221a") else { return }
