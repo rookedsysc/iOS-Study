@@ -99,6 +99,8 @@ class ViewController: UIViewController {
     }
     
     func configureChartView(covidOverViewList: [CovidOverview]) {
+        self.pieChartView.delegate = self // pieChartView Delegate 할당
+        
         // covidOverViewList 배열을 piChart의 Entry 객체로 맵핑시킴
         let entries  = covidOverViewList.compactMap{ [weak self] overview -> PieChartDataEntry? in
             guard let self = self else { return nil }
@@ -136,6 +138,15 @@ class ViewController: UIViewController {
         formatter.numberStyle = .decimal
         return formatter.number(from: string)?.doubleValue ?? 0 // nil이면 0
     }
-
 }
 
+
+extension ViewController: ChartViewDelegate {
+    // 차트에서 항목을 선택했을 때 호출되는 메서드, 엔트리 메서드 파라미터를 통해 선택된 항목에 저장되있는 항목을 가져올 수 있음
+    func chartValueSelected(_ chartView: ChartViewBase, entry: ChartDataEntry, highlight: Highlight) {
+        guard let covidDetailViewController = self.storyboard?.instantiateViewController(identifier: "CovidDetailTableViewController") as? CovidDetailTableViewController else { return }
+        guard let covidOverview = entry.data as? CovidOverview else { return }
+        covidDetailViewController.covidOverview = covidOverview
+        self.navigationController?.pushViewController(covidDetailViewController, animated: true)
+    }
+}
