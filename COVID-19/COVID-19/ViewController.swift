@@ -13,15 +13,29 @@ import Alamofire
 class ViewController: UIViewController {
     @IBOutlet weak var totalCaseLabel: UILabel!
     
+    // 서버에서 응답오기 전에 라벨은 표시 안되고 indicator가 표시되게 해줌
+    @IBOutlet weak var labelStackView: UIStackView!
+    @IBOutlet weak var indicatorView: UIActivityIndicatorView!
+    
     @IBOutlet weak var newCaseLabel: UILabel!
     @IBOutlet weak var pieChartView: PieChartView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // fetchCovidOverview 호출 이전에 Indicator View 동작
+        self.indicatorView.startAnimating()
+        
         // 코로나 API 호출
         self.fetchCovidOverview(completionHandler: { [weak self] result in
             guard let self = self else { return }
+            
+            // completion 호출된 경우
+            self.indicatorView.stopAnimating()
+            self.indicatorView.isHidden = true // indicator Animation 멈추고 숨겨줌
+            self.labelStackView.isHidden = false // stackView 표시
+            self.pieChartView.isHidden = false // pieChart 표시
+            
             switch result {
             case let .success(result) :
                 // label에 전체 확진자 수와 국내 신규 확진자 수를 표시해줌
