@@ -12,8 +12,8 @@ import Alamofire
 
 class ViewController: UIViewController {
     @IBOutlet weak var totalCaseLabel: UILabel!
-    @IBOutlet weak var newCaseLabel: UILabel!
     
+    @IBOutlet weak var newCaseLabel: UILabel!
     @IBOutlet weak var pieChartView: PieChartView!
     
     override func viewDidLoad() {
@@ -25,6 +25,12 @@ class ViewController: UIViewController {
             switch result {
             case let .success(result) :
                 debugPrint("success \(result)")
+                
+                // label에 전체 확진자 수와 국내 신규 확진자 수를 표시해줌
+                self.configureStackView(koreaCovidOverview: result.korea)
+                // Chart 생성
+                let covidOverviewList = self.makeCovidOverviewList(cityCovidOverview: result)
+                self.configureChartView(covidOverViewList: covidOverviewList)
             case let .failure(error) :
                 debugPrint("error \(error)")
             }
@@ -63,7 +69,55 @@ class ViewController: UIViewController {
                 }
                 
             })
-            
+    }
+    
+    func configureStackView(koreaCovidOverview: CovidOverview) {
+        self.totalCaseLabel.text  = "\(koreaCovidOverview.totalCase) 명"
+        self.newCaseLabel.text = "\(koreaCovidOverview.newCase) 명"
+        
+    }
+    
+    func makeCovidOverviewList(
+        cityCovidOverview: CityCovidOverView
+    ) -> [CovidOverview] {
+        return [
+            cityCovidOverview.seoul,
+            cityCovidOverview.busan,
+            cityCovidOverview.daegu,
+            cityCovidOverview.incheon,
+            cityCovidOverview.gwangju,
+            cityCovidOverview.daejeon,
+            cityCovidOverview.ulsan,
+            cityCovidOverview.sejong,
+            cityCovidOverview.gyeonggi,
+            cityCovidOverview.chungbuk,
+            cityCovidOverview.chungnam,
+            cityCovidOverview.jeonnam,
+            cityCovidOverview.gyeongbuk,
+            cityCovidOverview.gyeongnam,
+            cityCovidOverview.jeju,
+        ]
+    }
+    
+    func configureChartView(covidOverViewList: [CovidOverview]) {
+        // covidOverViewList 배열을 piChart의 Entry 객체로 맵핑시킴
+        let entries  = covidOverViewList.compactMap{ [weak self] overview -> PieChartDataEntry? in
+            guard let self = self else { return nil }
+            return PieChartDataEntry(
+                value: removeFormatString(string: overview.newCase),
+                label: overview.countryName, // 항목 이름
+                data: overview
+            )
+        }
+        let dataSet = PieChartDataSet(entries: entries, label: "코로나 발생 현황")
+        self.pieChartView.data = PieChartData(dataSet: dataSet)
+    }
+    
+    // 세자리 마다 콤마를 찍어주는 포맷의 문자열을 숫자로 변경해주는 함수
+    func removeFormatString(string: String) -> Double {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        return formatter.number(from: string)?.doubleValue ?? 0 // nil이면 0
     }
 
 }

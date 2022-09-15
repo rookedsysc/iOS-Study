@@ -19,6 +19,6 @@ class CovidDetailTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
     }
 }
