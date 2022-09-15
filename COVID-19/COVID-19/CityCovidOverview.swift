@@ -7,8 +7,6 @@
 
 import Foundation
 
-import Foundation
-
 // 시도명 키를 가지고 있는 객체
 struct CovidOverview: Codable {
     let countryName: String
