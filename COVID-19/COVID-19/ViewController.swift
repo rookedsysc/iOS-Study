@@ -24,15 +24,14 @@ class ViewController: UIViewController {
             guard let self = self else { return }
             switch result {
             case let .success(result) :
-                debugPrint("success \(result)")
-                
                 // label에 전체 확진자 수와 국내 신규 확진자 수를 표시해줌
                 self.configureStackView(koreaCovidOverview: result.korea)
                 // Chart 생성
                 let covidOverviewList = self.makeCovidOverviewList(cityCovidOverview: result)
                 self.configureChartView(covidOverViewList: covidOverviewList)
             case let .failure(error) :
-                debugPrint("error \(error)")
+                debugPrint(error)
+
             }
 
         })
@@ -111,6 +110,24 @@ class ViewController: UIViewController {
         }
         let dataSet = PieChartDataSet(entries: entries, label: "코로나 발생 현황")
         self.pieChartView.data = PieChartData(dataSet: dataSet)
+        
+        /* Pie Chart UI 변경 */
+        dataSet.sliceSpace = 1 // 항목간 간격
+        dataSet.entryLabelColor = .black // 항목 이름 색상
+        dataSet.xValuePosition = .outsideSlice // 항목 이름이 Pie 차트 바깥에 표시됨
+        dataSet.valueLinePart1OffsetPercentage = 0.8
+        dataSet.valueLinePart1Length = 0.2
+        dataSet.valueLinePart2Length = 0.3
+        dataSet.valueTextColor = .black // 값 색상
+        // Pie Chart의 항목이 다양한 색상으로 표현되게 해줌
+        dataSet.colors = ChartColorTemplates.vordiplom() + ChartColorTemplates.joyful() + ChartColorTemplates.liberty() + ChartColorTemplates.pastel() + ChartColorTemplates.material()
+        
+        // Pie Chart 80도 회전 시킴 
+        self.pieChartView.spin(
+            duration: 0.3, // 0.3초간
+            fromAngle: self.pieChartView.rotationAngle,
+            toAngle: self.pieChartView.rotationAngle + 80 // 현재 Angle에서 80도 정도 회전
+        )
     }
     
     // 세자리 마다 콤마를 찍어주는 포맷의 문자열을 숫자로 변경해주는 함수
